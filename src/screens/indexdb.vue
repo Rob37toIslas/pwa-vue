@@ -31,7 +31,6 @@ export default {
   },
   methods: {
     async initDB() {
-      // Inicializar la base de datos si no existe
       this.db = await openDB('MiBaseDeDatos', 1, {
         upgrade(db) {
           if (!db.objectStoreNames.contains('usuarios')) {
@@ -42,23 +41,23 @@ export default {
     },
     async guardarNombre() {
       await this.initDB();
-      await this.db.add('usuarios', { nombre: this.nombre }); // Guardar en IndexedDB
-      this.nombre = ''; // Limpiar el campo de entrada
+      await this.db.add('usuarios', { nombre: this.nombre }); 
+      this.nombre = ''; 
     },
     async mostrarNombre() {
       await this.initDB();
       const tx = this.db.transaction('usuarios', 'readonly');
       const store = tx.objectStore('usuarios');
-      const registros = await store.getAll(); // Recuperar todos los registros
+      const registros = await store.getAll(); 
       if (registros.length > 0) {
-        this.nombreGuardado = registros[registros.length - 1].nombre; // Mostrar el último registro
+        this.nombreGuardado = registros[registros.length - 1].nombre; 
       } else {
         this.nombreGuardado = 'No hay nombres guardados';
       }
     }
   },
   async mounted() {
-    await this.initDB(); // Inicia la base de datos cuando el componente esté montado
+    await this.initDB();
   }
 };
 </script>

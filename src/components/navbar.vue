@@ -7,6 +7,8 @@
         <li><RouterLink to="/">Session Storage</RouterLink></li>
         <li><RouterLink to="/localstorage">Local Storage</RouterLink></li>
         <li><RouterLink to="/indexdb">IndexedDB</RouterLink></li>
+        <li><RouterLink to="/firebase">Firebase</RouterLink></li>
+        <li><RouterLink to="/zindata">Zincronizar Data local y remonta</RouterLink></li>
       </ul>
     </nav>
   </template>
