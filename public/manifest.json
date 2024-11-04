@@ -3,9 +3,9 @@
     "short_name": "Pwa con vue",
     "description": "Actividad 07 | Demostrar de forma práctica el uso de todas las APIs de almacenamiento local, remoto y sincronización en PWA",
     "display": "standalone",
-    "start_url": ".",
-    "background_color": "#6a0dad",
-    "theme_color": "#6a0dad",
+    "start_url": "./",
+    "background_color": "#d60000",
+    "theme_color":"#d60000",
     "icons": [
       {
         "src": "/img/icons/android-chrome-192x192.png",

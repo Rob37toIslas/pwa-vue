@@ -1,8 +1,12 @@
 <template>
     <div>
-      <navbar />
+      <nav2 />
       <div class="firebase-container">
+        <div style="display: flex;justify-content: center;flex-direction: row">
+        <img src="../assets/logo-vertical.png" class="logo"  width="125" height="125"/>
+        <h1 style="font-size: 50px;">+</h1>
         <img alt="Vue logo" class="logo" src="../assets/logo.svg" width="125" height="125" />
+      </div>
         <h2>Guardar en Firebase y Offline con IndexedDB</h2>
         <p :class="onlineStatus ? 'online' : 'offline'">
           {{ onlineStatus ? 'Online' : 'Offline' }}
@@ -21,10 +25,11 @@
   import db from "@/controllers/firebaseConfig";
   import navbar from "@/components/navbar.vue";
   import { guardarEnIndexedDB, obtenerPendientes, borrarPendiente } from "@/controllers/localDb";
+  import Nav2 from "../../pw2/nav2.vue";
   
   export default {
     components: {
-      navbar
+      Nav2
     },
     data() {
       return {

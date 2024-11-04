@@ -8,15 +8,16 @@ import { getFirestore } from "firebase/firestore";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "XD",
+  apiKey: "",
   authDomain: "",
-  databaseURL: "https://prueba",
+  databaseURL: "",
   projectId: "prueba",
   storageBucket: "",
   messagingSenderId: "",
-  appId: "",
+  appId: '',
   measurementId: ""
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
